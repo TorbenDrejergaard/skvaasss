@@ -1,0 +1,704 @@
+
+/* Har effekt på alt */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Teko', sans-serif;
+
+}
+
+/* Hvis man linker til # scroller den op til start i stedet for at hoppe til start */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header sektion med navigations- og hamburgerbar */
+header{
+    background-color: #FAAB2C;
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    margin-right: 1rem;
+    font-size: 10px;
+}
+
+.branding {
+    font-family: 'brush';
+    color: var(--white);
+    font-weight: lighter;
+    font-size: 1.5rem;
+}
+
+.nav-link:hover {
+    color: #7c000a;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.hamburger-cart-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart img {
+    width: 1rem;
+}
+/* Hamburgerbar breakpoint */
+@media (max-width:768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #FAAB2C;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .nav-item {
+        margin: 16px 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+    
+}
+/* Header, Navigation, Burgermenu - Slut */
+
+.pixels{
+    width: 100%;
+    height: 5px;
+}
+
+.pixels img{
+width: 100%;
+margin-top: -1px;
+
+}
+
+body{
+    width: 100%;
+    background-color: #FAAB2C;
+}
+
+/* Filler styling */
+
+.filler-white{
+    width: 100%;
+    height: 70px;
+    background-color: white;
+}
+
+.filler-yellow{
+    width: 100%;
+    height: 70px;
+    background-color: #FAAB2C;
+}
+
+/* sketions styling */
+
+.white {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.yellow {
+    width: 100%;
+    height: 100%;
+    background-color: #FAAB2C;
+}
+
+/* tekst styling */
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: #FAAB2C;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+.white-h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+.white-h2{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+.yellow-h2{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: #FAAB2C;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 30px;
+}
+
+.underoverskrift-yellow {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: #FAAB2C;
+    padding-bottom: 30px;
+    width: 50%;
+    margin:  0 auto;
+    display: none;
+}
+
+.underoverskrift-white {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: white;
+    padding-bottom: 30px;
+    width: 50%;
+    margin:  0 auto;
+    display: none;
+}
+
+.underoverskrift-white-80 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    color: white;
+    padding-bottom: 30px;
+    width: 80%;
+    text-align: center;
+    margin:  0 auto;
+    line-height: 2rem;
+
+}
+
+h6 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    color: white;
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 30px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+p{
+    font-family: 'Teko', sans-serif;
+    padding-bottom: 30px;
+    width: 50%;
+    margin:  0 auto;
+    font-size: 1rem;
+}
+
+/* billede styling */
+
+.center-right img{
+    width: 100%;
+
+}
+
+.center img{
+    width: 100%;
+    margin-top: -50px;
+
+}
+
+.center-left img{
+    width: 100%;
+
+}
+
+.christmas-banner{
+    background-image: url(/img/4x/christmas@4x.png);
+    background-position:top;
+    background-repeat:repeat-x;
+    background-size: contain;
+    width: 100%;
+    height: 100px;
+
+}
+
+/* Knap styling */
+
+.webshop-link{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+
+
+}
+
+.link{
+    padding: 1rem 2rem;
+    background-image: url(/img/4x/knap_1@4x.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    margin: 0 auto;
+}
+
+.variant-link{
+    text-align: center;
+}
+
+.christmas-link{
+    text-align: center;
+}
+
+.historie-link{
+    width: 100%;
+    display: block;
+    padding-bottom: 40px;
+    text-align: center;
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+
+/*Webshop styling*/
+
+.webshop-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.webshop-pro{
+    background-color: #FAAB2C;
+    width: 300px;
+    height: 300px;
+    margin: 5% auto;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.webshop-pro img{
+    width: 100%;
+    align-items: center;
+}
+
+/* Hover effekt til produkter i webshoppen */
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 300px;
+    width: 300px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #FAAB2C;
+  }
+  
+.webshop-pro:hover .overlay {
+    opacity: 1;
+  }
+  
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    line-height: 4rem;
+}
+
+/* Købssteder styling */
+
+.store-wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.store-place{
+    background-color: #FAAB2C;
+    width: 300px;
+    height: 300px;
+    margin: 5% auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.store-place img{
+    width: 100%;
+}
+
+/* 404 fejl styling */
+
+.error{
+    width: 60%;
+    margin: auto;
+    padding-top: 100px;
+
+}
+
+.error img{
+    width: 100%;
+}
+
+/* Breakpoint til tablet */
+
+@media screen and (min-width: 480px) {
+
+   
+    /* tekst styling */
+
+    h1 {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1.5rem;
+        color: #FAAB2C;
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+
+    .white-h1 {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 1.5rem;
+        color: white;
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+
+
+    p{
+        font-family: 'Teko', sans-serif;
+        padding-bottom: 30px;
+        text-align: center;
+        width: 80%;
+        margin:  0 auto;
+        font-size: 1rem;
+    }
+   
+    /* billede styling */
+
+    .center-right{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .center-left{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .center-right img{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .center img{
+        width: 100%;
+        margin-top: -80px;
+    }
+
+    /* 404 fejl styling */
+
+    .error{
+        width: 60%;
+        margin: auto;
+        padding-top: 100px;
+    
+    }
+    
+    .error img{
+        width: 100%;
+    }
+
+
+
+}
+
+/* Break point til Desktop */
+
+@media screen and (min-width: 768px) {
+
+    /* sektion styling */
+
+    .white {
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .yellow {
+        width: 100%;
+        height: 100%;
+        background-color: #FAAB2C;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* tekst styling */
+
+    h1 {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 2rem;
+        color: #FAAB2C;
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 30px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .white-h1 {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 2rem;
+        color: white;
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 30px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .white-h2{
+        font-family: 'Press Start 2P', cursive;
+        font-size: 2.5rem;
+        color: white;
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        width: 100%;
+    }
+
+    .yellow-h2{
+        font-family: 'Press Start 2P', cursive;
+        font-size: 2.5rem;
+        color: #FAAB2C;
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        width: 100%;
+    }
+
+    .underoverskrift-white{
+        display: block;
+        width: 80%;
+        margin: 0 0 0 auto;
+        line-height: 2rem;
+    }
+
+    .underoverskrift-yellow{
+        display: block;
+        width: 80%;
+        margin: 0;
+        line-height: 2rem;
+
+    }
+
+    .text-container{
+        width: 40%;
+        order: 2;
+        margin: auto 0;
+    }
+
+    .text-container-80{
+        width: 80%;
+        order: 2;
+        margin: -50px auto 0 auto;
+    }
+
+    .text-right{
+        width: 40%;
+        order: 2;
+        margin: 0 0 0 auto;
+    }
+
+    .p-left{
+        font-family: 'Teko', sans-serif;
+        padding-bottom: 30px;
+        width: 80%;
+        font-size: 1.5rem;
+        text-align: left;
+        margin: 0 auto 0 0;
+    }
+
+    .p-right{
+        font-family: 'Teko', sans-serif;
+        padding-bottom: 30px;
+        width: 80%;
+        font-size: 1.5rem;
+        text-align: left;
+        margin: 0 0 0 auto;
+    }
+
+    /* billede styling */
+
+    .center{
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .center img{
+        width: 80%;
+
+        margin-top: -80px;
+    }
+   
+    .center-right{
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .center-right img{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .center-left{
+        width: 50%;
+        margin: 0 auto;
+        float: right;
+    }
+
+    .center-left img{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .right{
+        order: 3;
+    }
+
+    .right img{
+        width: 90%;
+    }
+
+    /* Knap styling */
+
+    .webshop-link{
+        width: 80%;
+        display: block;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .variant-link{
+        width: 100%;
+        display: block;
+        padding-bottom: 40px;
+    }
+
+    .christmas-link{
+        text-align: center;
+    }
+
+    .historie-link{
+        width: 100%;
+        display: block;
+        padding-bottom: 40px;
+        order: 3;
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    /* 404 fejl styling */
+
+    .error{
+        width: 40%;
+        margin: auto;
+        padding-top: 150px;
+    
+    }
+    
+    .error img{
+        width: 100%;
+    }
+
+
+
+}
